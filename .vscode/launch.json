@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Agent-TARS CLI (TypeScript)",
+            "runtimeExecutable": "npx",
+            "runtimeArgs": [
+                "tsx"
+            ],
+            "skipFiles": [],
+            "program": "${workspaceFolder}\\multimodal\\agent-tars\\cli\\src\\cli.ts",
+            "cwd": "${workspaceFolder}\\multimodal\\agent-tars\\cli",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "sourceMaps": true,
+            "env": {
+                "AGENT_DEBUG": "1"
+            }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Agent Server",
+            "runtimeExecutable": "npx",
+            "runtimeArgs": [
+                "tsx"
+            ],
+            "skipFiles": [],
+            "program": "${workspaceFolder}\\multimodal\\tarko\\agent-server\\src\\debug.ts",
+            "cwd": "${workspaceFolder}\\multimodal\\tarko\\agent-server",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "sourceMaps": true,
+            "env": {
+                "AGENT_DEBUG": "1",
+                "OPENAI_API_KEY": "YOUR_API_KEY",
+                "OPENAI_BASE_URL": "https://dashscope.aliyuncs.com/compatible-mode/v1"
+            }
+        }
+    ]
+}
