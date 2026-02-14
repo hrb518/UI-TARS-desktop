@@ -171,8 +171,6 @@ export class Agent<T extends AgentOptions = AgentOptions>
     this.executionController = new AgentExecutionController();
   }
 
-
-
   /**
    * Custom LLM client for testing or custom implementations
    *
@@ -201,6 +199,7 @@ export class Agent<T extends AgentOptions = AgentOptions>
    * @param tool - The tool definition to register
    */
   public registerTool(tool: Tool): void {
+    registerTool;
     this.toolManager.registerTool(tool);
   }
 
@@ -316,8 +315,6 @@ Provide concise and accurate responses.`;
       const sessionId =
         normalizedOptions.sessionId ??
         `${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
-
-
 
       // Create and send agent run start event
       const runStartEvent = this.eventStream.createEvent('agent_run_start', {

@@ -33,7 +33,7 @@
   },
   "engines": {
     "node": ">=22",
-    "pnpm": "9"
+    "pnpm": ">=9"
   },
   "devDependencies": {
     "pnpm-dev-kit": "0.0.5-canary-7d05b7ce-20251213170600",

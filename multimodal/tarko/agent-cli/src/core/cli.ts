@@ -28,8 +28,8 @@ import { CLICommand, CLIInstance, AgentCLIInitOptions, AgentServerInitOptions } 
 const DEFAULT_OPTIONS: Partial<AgentCLIInitOptions> = {
   versionInfo: {
     version: '1.0.0',
-    buildTime: __BUILD_TIME__,
-    gitHash: __GIT_HASH__,
+    buildTime: typeof __BUILD_TIME__ !== 'undefined' ? __BUILD_TIME__ : Date.now().toString(),
+    gitHash: typeof __GIT_HASH__ !== 'undefined' ? __GIT_HASH__ : 'dev',
   },
 };
 

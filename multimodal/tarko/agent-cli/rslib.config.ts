@@ -37,8 +37,9 @@ export default defineConfig({
     {
       format: 'cjs',
       syntax: 'es2021',
-      bundle: true,
+      bundle: false,
       dts: true,
+      sourceMap: true,
       banner: { js: BANNER },
       autoExternal: {
         dependencies: false,
@@ -46,13 +47,18 @@ export default defineConfig({
         peerDependencies: true,
       },
       output: {
-        externals: ['@agent-tars/core', '@tarko/agent-server', '@tarko/shared-utils', '@tarko/agent-ui-builder'],
+        externals: [
+          '@agent-tars/core',
+          '@tarko/agent-server',
+          '@tarko/shared-utils',
+          '@tarko/agent-ui-builder',
+        ],
       },
     },
   ],
   output: {
     target: 'node',
     cleanDistPath: false,
-    sourceMap: false,
+    sourceMap: true,
   },
 });
